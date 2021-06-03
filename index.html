@@ -4,9 +4,27 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <title>Form</title>
 </head>
 <body>
-    test
+    <section class="logInSection">
+        <div class=logInFormBlock>
+            <form action="someaction" id="logIn" class="LogForm">
+                <div class="pieceOfForm">
+                    <input type="text" class="defaultInput" name="Name" autocomplete="off" tabindex="1">
+                    <label for="Name" class="labelInput">Ваше имя:</label>
+                </div>
+                <div class="pieceOfForm">
+                    <input type="text" class="defaultInput" name="Mail" autocomplete="off" tabindex="2">
+                    <label for="Name" class="labelInput">Ваш Email:</label>
+                </div>
+                <div class="pieceOfForm">
+                    <input type="submit" class="submitForm" tabindex="-1">
+                </div>
+            </form>
+        </div>
+    </section>
+    <script src="assets/js/main.js"></script>
 </body>
 </html>

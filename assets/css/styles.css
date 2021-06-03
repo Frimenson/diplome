@@ -1,0 +1,161 @@
+:root {
+    --inputWidth: 230px;
+    --hiddenTab: -230px;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: serif;
+}
+
+.logInSection {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logInFormBlock {
+    width: 450px;
+    height: 500px;
+}
+
+.LogForm {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    height: 100%;
+    background: linear-gradient(45deg, rgba(155, 89, 182,0.7), rgba(236, 240, 241,1.0));
+    border-radius: 5px;
+}
+
+.pieceOfForm {
+    width: 100%;
+    margin: 8px 0 0 0;
+    padding: 10px;
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.pieceOfForm:first-child {
+    margin-top: 35px;
+}
+
+.defaultInput {
+    margin-top: 15px;
+    font-size: 20px;
+    padding: 5px 10px;
+    width: var(--inputWidth);
+    position: relative;
+}
+
+
+.labelInput {
+    width: var(--inputWidth);
+    padding: 0 0 10px 10px;
+    font-size: 18px;
+    text-transform: uppercase;
+    position: relative;
+    overflow: hidden;
+}
+
+.labelInput::after {
+    content: '';
+    position: absolute;
+    left: var(--hiddenTab);
+    bottom: 0;
+    width: var(--inputWidth);
+    height: 3px;
+    background: linear-gradient(45deg, rgba(155, 89, 182,1.0), rgba(231, 76, 60,1.0));
+    transition-duration: 1s;
+    transition-property: left;
+}
+
+.defaultInput:focus + .labelInput::after {
+    left: 0;
+}
+
+.submitForm {
+    font-size: 18px;
+    width: var(--inputWidth);
+    padding: 10px 0;
+    margin-top: 10px;
+    background-color: rgba(255, 255, 255, 0);
+    border: none;
+    text-transform: uppercase;
+}
+
+.submitForm:hover {
+    border: 1px solid black
+}
+
+/* TEST */
+
+.testArea {
+    width: 100%;
+    min-height: 40vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.content {
+    width: 70%;
+    background-color: rgba(236, 240, 241,1.0);
+    padding: 40px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.question {
+    width: 60%;
+    padding-top: 20px;
+}
+
+.question h3 {
+    text-align: justify;
+    font-weight: 100;
+    font-size: 24px;
+    padding-bottom: 10px;
+}
+
+.answer h2 {
+    font-weight: 400;
+    font-size: 22px;
+    padding-left: 20px;
+}
+
+.pieceOfAnswer {
+    padding: 7px 0;
+}
+
+.pieceOfAnswer label {
+    font-size: 19px;
+    padding: 5px 10px;
+}
+
+.pieceOfAnswer input[type="radio"]:checked +  label{
+    color: black;
+    background-color: #2ecc71;
+}
+
+.fixedName {
+    width: 70%;
+}
+
+.fixedName h2 {
+    font-weight: 100;
+    padding: 10px 0;
+    width: 10vw;
+    text-overflow: ellipsis;
+}
