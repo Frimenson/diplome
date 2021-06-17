@@ -10,13 +10,13 @@
 <body>
     <section class="logInSection">
         <div class=logInFormBlock>
-            <form action="someaction" id="logIn" class="LogForm">
+            <form action="someaction" id="logIn" class="LogForm" onsubmit="event.preventDefault(); validateMyForm();">
                 <div class="pieceOfForm">
-                    <input type="text" class="defaultInput" name="Name" autocomplete="off" tabindex="1">
+                    <input type="text" class="defaultInput" id="Name" name="Name" autocomplete="off" tabindex="1">
                     <label for="Name" class="labelInput">Ваше имя:</label>
                 </div>
                 <div class="pieceOfForm">
-                    <input type="text" class="defaultInput" name="Mail" autocomplete="off" tabindex="2">
+                    <input type="text" class="defaultInput" id="Mail" name="Mail" autocomplete="off" tabindex="2">
                     <label for="Name" class="labelInput">Ваш Email:</label>
                 </div>
                 <div class="pieceOfForm">
@@ -25,6 +25,7 @@
             </form>
         </div>
     </section>
+    <script src="assets/js/main.js"></script>
     <script src="assets/js/main.js"></script>
 </body>
 </html>

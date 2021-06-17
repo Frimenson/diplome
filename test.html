@@ -8,12 +8,12 @@
     <title>Test</title>
 </head>
 <body>
-    <form action="someaction" id="sendResults">
+    <form id="form" action="someaction" id="sendResults" onsubmit="event.preventDefault(); sendMyForm();">
     <section class="testArea">
         <div class="content">
             <div class="fixedName">
-                <h2>Артём Семёнов</h2>
-                <h2>artem_semenov@mail.ru</h2>
+                <h2 id="name">Артём Семёнов</h2>
+                <h2 id="mail">artem_semenov@mail.ru</h2>
             </div>
             <div class="question">
                 <h3>Я имею четкие убеждения относительно того, что является правильным, а что неправильным, что хорошо, а что плохо.</h3>
@@ -249,5 +249,6 @@
         </div>
     </section>
     </form>
-</body>
+    <script src="assets/js/main.js"></script>
+</body> 
 </html>
